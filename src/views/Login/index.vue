@@ -78,9 +78,13 @@ const handleLogin = () => {
           loading.value = false;
           user.setToken("123456");
           user.setUserInfo({
-            name: "admin",
+            username: "admin",
             role: 1,
             showName: "管理员",
+            phoneNumber: "13888888888",
+            email: "admin@163.com",
+            depart: "产研中心/技术部",
+            createTime: "202301-01 10:00:00",
           });
           router.push("/home/index");
         }, 1000);

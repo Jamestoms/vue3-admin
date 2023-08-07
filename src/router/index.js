@@ -7,6 +7,7 @@ NProgress.configure({
 import Login from "../views/Login";
 import home from "./home";
 import user from "./user";
+import userCenter from "./user-center";
 
 import { useUserStore } from "@/store/user";
 
@@ -29,6 +30,7 @@ export const routes = [
   },
   home,
   user,
+  userCenter,
   {
     path: "/404",
     name: "NotFound",

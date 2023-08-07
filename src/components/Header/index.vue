@@ -36,6 +36,8 @@ const handleCommand = (val) => {
   if (val === "logout") {
     user.resetToken();
     router.push("/");
+  } else if (val === "user-center") {
+    router.push("/user-center/index");
   }
 };
 </script>

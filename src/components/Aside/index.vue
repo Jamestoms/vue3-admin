@@ -32,15 +32,14 @@
 import { routes } from "@router";
 import { useRoute } from "vue-router";
 const route = useRoute();
-import { ref } from "vue";
-// import { ref, watch } from "vue";
+import { ref, watch } from "vue";
 const defaultRoute = ref(route.path);
-// watch(
-//   () => route.path,
-//   (val) => {
-//     defaultRoute.value = val;
-//   }
-// );
+watch(
+  () => route.path,
+  (val) => {
+    defaultRoute.value = val;
+  }
+);
 function getAsideMenus(routes) {
   return routes
     .map((el) => {

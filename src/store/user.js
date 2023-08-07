@@ -42,7 +42,7 @@ export const useUserStore = defineStore(
   () => {
     const token = ref("");
     const userInfo = reactive({
-      name: "",
+      username: "",
       role: "",
       showName: "",
     });
@@ -52,10 +52,22 @@ export const useUserStore = defineStore(
     function resetToken() {
       token.value = "";
     }
-    function setUserInfo({ name, role, showName }) {
-      userInfo.name = name;
+    function setUserInfo({
+      username,
+      role,
+      showName,
+      phoneNumber,
+      email,
+      depart,
+      createTime,
+    }) {
+      userInfo.username = username;
       userInfo.role = role;
       userInfo.showName = showName;
+      userInfo.phoneNumber = phoneNumber;
+      userInfo.email = email;
+      userInfo.depart = depart;
+      userInfo.createTime = createTime;
     }
     return {
       token,
